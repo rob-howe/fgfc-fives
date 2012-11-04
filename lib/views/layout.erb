@@ -1,0 +1,155 @@
+<html>
+<head>
+    <title>Forest Glade Fives</title>
+    <link rel="stylesheet" href="/css/fives_main.css"/>
+    <link rel="stylesheet" href="/css/fives.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="/script/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/script/fgfc.js"></script>
+    <script type="text/javascript" src="/script/application.js"></script>
+    <script type="text/javascript" src="/script/validation.js"></script>
+    <link rel="icon" type="image/ico" href="http://www.thefg5s.co.uk/fgfc/images/favicon.ico"/>
+</head>
+<body>
+<div id="body_container">
+    <div id="header-X">
+        <div id="Xslogan">
+            <img src="/images/Header-Alternative.png" alt="banner"/>
+            <!--menu-->
+            <div id=fgfc_menu>
+                <ul>
+                    <li style="list-style: none;text-align:right;padding-right:60px;color:white;">
+                        <a href="/login">login</a></li>
+                </ul>
+            </div>
+            <!--menu end-->
+        </div>
+    </div>
+    <div id="content_wrapper">
+        <div id="top_frame">
+            <img src="/images/fg5s-small-logo.png" alt="FG5's" style="margin-left:8px;margin-right:5px;"/>
+            <img src="/images/WebHome3.png" alt="banner"/>
+            <img src="/images/WebHome1.png" alt="banner"/>
+            <img src="/images/WebHome6.png" alt="banner"/>
+            <img src="/images/WebHome4.png" alt="banner"/>
+        </div>
+
+        <div>
+            <div id="left-nav">
+                <table>
+                    <% if true %>
+                        <tr>
+                            <td colspan="2" style="padding-top:10px;padding-bottom:10px;background-color:#9acd32;text-align:center;border: solid 1px #d3d3d3">
+                                <a class="home" href="/admin"><span style="font-size:13px;">Team Summary</span></a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-top:10px;padding-bottom:10px;background-color:#9acd32;border: solid 1px #d3d3d3">
+                                <form action="find" controller="admin">
+                                    RefId <input type="text" name="refId" size="7"/>
+                                    <input type="submit" class="save" name="find" value="Find"/>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-top:10px;padding-bottom:10px;text-align:center;background-color:#9acd32;border: solid 1px #d3d3d3">
+                                <form action="create" controller="admin">
+                                    <input type="submit" class="save" name="add" value="Add Team"/>
+                                </form>
+                            </td>
+                        </tr>
+                    <% end %>
+                    <tr>
+                        <td colspan="2">--------------------------------</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a class="home" href="/">FG5's Home</a></td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td colspan="2">--------------------------------</td>
+                    </tr>
+                    <td colspan="2" style="padding-top:10px;padding-bottom:10px;background-color:#dcdcdc;border: solid 1px #d3d3d3">
+                        <a id="apply_online" class="home" href="/register"><h4>Apply Online</h4></a>
+                        <br/>or download an
+                        <br/><br/><a class="home" href="javascript:largePopUp('/fgfc/pdf/fg5s_application_form.pdf')">
+                        <h4>Application Form</h4></a>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">--------------------------------</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a class="home" href="/rules">Rules And Regulations</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a class="home" href="/location">FG5's Location</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">--------------------------------</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Saturday <%=$saturday_date%> May</h4></td>
+                    </tr>
+                    <tr>
+                        <td><a class="home" href="/team/U6"><h3>U6</h3></a></td>
+                        <td><a class="home" href="/team/U8"><h3>U8</h3></a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="home" href="/team/U10"><h3>U10</h3></a></td>
+                        <td><a class="home" href="/team/U12"><h3>U12</h3></a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="home" href="/team/U14"><h3>U14</h3></a></td>
+                        <td><a class="home" href="/team/U16"><h3>U16</h3></a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">--------------------------------</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Sunday <%=$sunday_date%> May</h4></td>
+                    </tr>
+                    <tr>
+                        <td><a class="home" href="/team/U7"><h3>U7</h3></a></td>
+                        <td><a class="home" href="/team/U9"><h3>U9</h3></a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="home" href="/team/U10_Girls"><h3>U10 Girls</h3></a></td>
+                        <td><a class="home" href="/team/U11"><h3>U11</h3></a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="home" href="/team/U12_Girls"><h3>U12 Girls</h3></a></td>
+                        <td><a class="home" href="/team/U13"><h3>U13</h3></a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="home" href="/team/U15"><h3>U15</h3></a></td>
+                        <td><a class="home" href="/team/U18"><h3>U18</h3></a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">--------------------------------</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a class="home" href="/referees">Referees</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a class="home" href="/sponsorship">Sponsorship</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a class="home" href="/contacts">FG5's Contacts</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a class="home" href="http://www.forestgladefc.co.uk">FGFC.com</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="content">
+                <div class="body">
+                    <%= yield %>
+                </div>
+            </div>
+        </div>
+        <div id="footer"> &copy;2012 Forest Glade Football Club</div>
+    </div>
+</div>
+</body>
+</html>

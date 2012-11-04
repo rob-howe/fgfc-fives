@@ -1,0 +1,139 @@
+<div class="body">
+    <h1>Thank You for Your Application to the FG5's <%=$year%></h1>
+
+    <div class="message">You have submitted the following details.</div>
+    <div class="dialog">
+        <table>
+            <tbody>
+
+            <tr class="prop">
+                <td valign="top" class="name"><strong>Age Group</strong></td>
+                <td valign="top">${fivesTeamInstance?.ageGroup?.description}</td>
+            </tr>
+            <tr>
+                <td valign="top" class="name"><strong>Team Name</strong></td>
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "teamName")}
+                    ${fieldValue(bean: fivesTeamInstance, field: "teamDesignation")}
+                </td>
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name"><strong>Manager Name</strong></td>
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "managerName")}</td>
+                <td colspan="2"></td>
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name"><strong>Home Phone</strong></td>
+
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "homePhone")}</td>
+
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name"><strong>Mobile Phone</strong></td>
+
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "mobilePhone")}</td>
+
+            </tr>
+
+            <tr class="prop">
+                <td valign="top" class="name"><strong>Email Address</strong></td>
+
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "emailAddress")}</td>
+
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name"><strong>Address</strong></td>
+
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressLine1")}</td>
+
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name"></td>
+
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressLine2")}</td>
+
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name"></td>
+
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressTown")}</td>
+
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name"></td>
+
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressCounty")}</td>
+
+            </tr>
+            <tr class="prop">
+                <td valign="top" class="name"><strong>Postcode</strong></td>
+
+                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressPostcode")}</td>
+            </tr>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4">Your application reference id is
+                    <strong>${fieldValue(bean: fivesTeamInstance, field: "refId")}</strong>.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+
+    <p>An email confirming your application will be sent to you shortly.</p>
+    <br/>
+
+    <p>If any of the above details are incorrect please email fg5s@forestgladefc.com with any alterations you wish to
+        make.</p>
+    <br/>
+
+    <p>The entry fee is &pound;40 per team.</p>
+    <% if discount_applicable %>
+        <p>As there is a <strong>&pound;5</strong> discount for teams registered before the 31st March
+            <%=$year%> your entry fee is <strong>&pound;35.00</strong> provided payment
+            reaches us before 31st March.</p>
+        <br/>
+
+        <div style="float:left;margin-left:150px;">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="C9726VZGSU8EU">
+                <input type="hidden" name="return" value="http://www.thefg5s.co.uk/fgfc/payment/confirmed?refId=${fivesTeamInstance.refId}">
+                <input type="hidden" name="invoice" value="${fivesTeamInstance.refId}">
+                <input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_paynow_LG.gif" style="border:none;" name="submit" alt="PayPal - The safer, easier way to pay online.">
+                <img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_GB/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>
+    <% else %>
+        <div style="float:left;margin-left:150px;">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="8NBPM23GVDF54">
+                <input type="hidden" name="invoice" value="${fivesTeamInstance.refId}">
+                <input type="hidden" name="return" value="http://www.thefg5s.co.uk/fgfc/payment/confirmed?refId=${fivesTeamInstance.refId}">
+                <input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_paynow_LG.gif" style="border:none;" name="submit" alt="PayPal - The safer, easier way to pay online.">
+                <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+            </form>
+        </div>
+    <% end %>
+    <div style="float:left;margin-top:5px;" class="tooltip" title="Pay now using PayPal's on line secure payment system, all major credit cards and debit cards are acceptable or with an existing pay pal account."></div>
+    <div style="clear:both;">
+        <br/>
+
+        <div>
+            <div style="float:left;"><p>If you don't wish to pay on-line now then please send a cheque to:</p></div>
+            <div style="float:left;">
+                <p>Lee Ashley<br/>3 Grennan Close<br/>Ingrave<br/>Brentwood<br/>Essex<br/>CM13 3YD</p></div>
+        </div>
+        <div style="clear:both;">
+            <br/>
+
+            <p>Please quote your reference id <strong>${fivesTeamInstance.refId}</strong> on all correspondence.</p>
+        </div>
+
+    </div>
+</div>
