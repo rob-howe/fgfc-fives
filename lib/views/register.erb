@@ -28,7 +28,7 @@
             </div>
         <% end %>
         <div id="errors" class="errors" style="display:none;"></div>
-        <form name="register" action="registered">
+        <form name="register" action="registered" method="post">
             <div class="dialog">
                 <table>
                     <tbody>
@@ -43,7 +43,7 @@
                             <label for="ageGroup.id">Age Group</label><span class="required"> *</span>
                         </td>
                         <td id="ageGroupCell" valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'ageGroup', 'errors')}">
-                            <select id="ageGroup" name="ageGroup.id">
+                            <select id="ageGroup" name="age_group_id">
                                 <option value="">Please select</option>
                                 <% @age_groups.each do |age_group| %>
                                     <option value="<%= age_group.id %>"><%= age_group.description %></option>
@@ -58,13 +58,13 @@
                             <label for="teamName">Team Name</label><span class="required"> *</span>
                         </td>
                         <td id="teamNameCell" valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'teamName', 'errors')}">
-                            <input type="text" id="team_name" name="team_name" value="${fivesTeamInstance?.teamName}" size="30" tabindex="2" maxlength="60"/>
+                            <input type="text" id="team_name" name="team_name" value="<%=@fives_team.team_name if @fives_team %>" size="30" tabindex="2" maxlength="60"/>
                         </td>
                         <td valign="top" class="name">
                             <label for="teamDesignation">Designation</label>
                         </td>
                         <td valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'teamDesignation', 'errors')}">
-                            <input type="text" id="designation" name="team_designation" value="${fivesTeamInstance?.teamDesignation}" tabindex="3" maxlength="30"/>
+                            <input type="text" id="designation" name="team_designation" value="<%=@fives_team.team_designation if @fives_team %>" tabindex="3" maxlength="30"/>
                             <span class="tooltip" title="Used to identify several teams from one club in the same age group, examples are 'Lions', 'Tigers', 'A', 'Red', 'Blue', 'Volcanos'...etc, it can however be anything you like."></span>
                         </td>
                     </tr>
@@ -80,13 +80,13 @@
                             <label for="managerName">Name</label><span class="required"> *</span>
                         </td>
                         <td id="managerNameCell" valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'managerName', 'errors')}">
-                            <input type="text" id="manager_name" name="manager_name" value="${fivesTeamInstance?.managerName}" size="30" tabindex="4" maxlength="70"/>
+                            <input type="text" id="manager_name" name="manager_name" value="<%=@fives_team.manager_name if @fives_team %>" size="30" tabindex="4" maxlength="70"/>
                         </td>
                         <td valign="top" class="name">
                             <label for="addressLine1">Address</label>
                         </td>
                         <td valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'addressLine1', 'errors')}">
-                            <input type="text" name="addressLine1" value="${fivesTeamInstance?.addressLine1}" size="30" tabindex="8"/>
+                            <input type="text" name="address_line_1" value="<%=@fives_team.address_line1 if @fives_team %>" size="30" tabindex="8"/>
                         </td>
                     </tr>
 
@@ -95,13 +95,13 @@
                             <label for="homePhone">Home Phone</label>
                         </td>
                         <td id="homePhoneCell" valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'homePhone','errors')}">
-                            <input type="text" id="homePhone" name="homePhone" value="${fivesTeamInstance?.homePhone}" tabindex="5" maxlength="14"/>
+                            <input type="text" id="homePhone" name="home_phone" value="<%=@fives_team.home_phone if @fives_team %>" tabindex="5" maxlength="14"/>
                         </td>
                         <td valign="top" class="name">
                             <label for="addressLine2"></label>
                         </td>
                         <td valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'addressLine1', 'errors')}">
-                            <input type="text" name="addressLine2" value="${fivesTeamInstance?.addressLine2}" size="30" tabindex="9" maxlength="100"/>
+                            <input type="text" name="address_line_2" value="<%=@fives_team.address_line2 if @fives_team %>" size="30" tabindex="9" maxlength="100"/>
                         </td>
                     </tr>
 
@@ -112,7 +112,7 @@
                             </label><span class="required"> *</span>
                         </td>
                         <td id="mobilePhoneCell" valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'mobilePhone','errors')}">
-                            <input type="text" id="mobilePhone" name="mobilePhone" value="${fivesTeamInstance?.mobilePhone}" tabindex="6" maxlength="14"/>
+                            <input type="text" id="mobilePhone" name="mobile_phone" value="<%=@fives_team.mobile_phone if @fives_team %>" tabindex="6" maxlength="14"/>
                             <span class="tooltip" title="A mobile number is required as text messaging is one of our forms of communication to participating teams."></span>
                         </td>
                         <td valign="top" class="name">
@@ -121,7 +121,7 @@
                             </label>
                         </td>
                         <td valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'addressTown', 'errors')}">
-                            <input type="text" name="addressTown" value="${fivesTeamInstance?.addressTown}" tabindex="10" maxlength="100"/>
+                            <input type="text" name="address_town" value="<%=@fives_team.address_town if @fives_team %>" tabindex="10" maxlength="100"/>
                         </td>
                     </tr>
 
@@ -131,7 +131,7 @@
                             <label for="emailAddress">Email Address</label><span class="required"> *</span>
                         </td>
                         <td id="emailAddressCell" valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'emailAddress', 'errors')}">
-                            <input type="text" id="emailAddress" name="emailAddress" value="${fivesTeamInstance?.emailAddress}" size="30" tabindex="7" maxlength="50"/>
+                            <input type="text" id="emailAddress" name="email_address" value="<%=@fives_team.email_address if @fives_team %>" size="30" tabindex="7" maxlength="50"/>
                             <span class="tooltip" title="For on line applications we require an email address so we can email your invoice. If you don't have an email address download the application form and send it in the post."></span>
                         </td>
                         <td valign="top" class="name">
@@ -140,7 +140,7 @@
                             </label>
                         </td>
                         <td valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'addressCounty', 'errors')}">
-                            <input type="text" name="addressCounty" value="${fivesTeamInstance?.addressCounty}" tabindex="11" maxlength="50"/>
+                            <input type="text" name="address_county" value="<%=@fives_team.address_county if @fives_team %>" tabindex="11" maxlength="50"/>
                         </td>
                     </tr>
 
@@ -153,7 +153,7 @@
                             </label>
                         </td>
                         <td valign="top" class="value ${hasErrors(bean: fivesTeamInstance, field: 'addressPostcode', 'errors')}">
-                            <input type="text" name="addressPostcode" value="${fivesTeamInstance?.addressPostcode}" size="9" tabindex="12" maxlength="10"/>
+                            <input type="text" name="address_postcode" value="<%=@fives_team.address_postcode if @fives_team %>" size="9" tabindex="12" maxlength="10"/>
                         </td>
                     </tbody>
                 </table>

@@ -19,7 +19,12 @@
             <div id=fgfc_menu>
                 <ul>
                     <li style="list-style: none;text-align:right;padding-right:60px;color:white;">
-                        <a href="/login">login</a></li>
+                        <% if session[:user] %>
+                            logged in:<%= session[:user_name] %>
+                        <% else %>
+                            <a href="/login">login</a>
+                        <% end %>
+                    </li>
                 </ul>
             </div>
             <!--menu end-->
@@ -37,22 +42,23 @@
         <div>
             <div id="left-nav">
                 <table>
-                    <% if true %>
+                    <% if session[:user] %>
                         <tr>
                             <td colspan="2" style="padding-top:10px;padding-bottom:10px;background-color:#9acd32;text-align:center;border: solid 1px #d3d3d3">
-                                <a class="home" href="/admin"><span style="font-size:13px;">Team Summary</span></a></td>
+                                <a class="home" href="/admin/summary"><span style="font-size:13px;">Team Summary</span></a>
+                            </td>
                         </tr>
                         <tr>
                             <td colspan="2" style="padding-top:10px;padding-bottom:10px;background-color:#9acd32;border: solid 1px #d3d3d3">
-                                <form action="find" controller="admin">
-                                    RefId <input type="text" name="refId" size="7"/>
+                                <form action="/admin/find" method="post">
+                                    RefId <input type="text" name="ref_id" size="7"/>
                                     <input type="submit" class="save" name="find" value="Find"/>
                                 </form>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" style="padding-top:10px;padding-bottom:10px;text-align:center;background-color:#9acd32;border: solid 1px #d3d3d3">
-                                <form action="create" controller="admin">
+                                <form action="/admin/add_team" method="post">
                                     <input type="submit" class="save" name="add" value="Add Team"/>
                                 </form>
                             </td>
@@ -71,7 +77,7 @@
                     <td colspan="2" style="padding-top:10px;padding-bottom:10px;background-color:#dcdcdc;border: solid 1px #d3d3d3">
                         <a id="apply_online" class="home" href="/register"><h4>Apply Online</h4></a>
                         <br/>or download an
-                        <br/><br/><a class="home" href="javascript:largePopUp('/fgfc/pdf/fg5s_application_form.pdf')">
+                        <br/><br/><a class="home" href="javascript:largePopUp('/pdf/fg5s_application_form.pdf')">
                         <h4>Application Form</h4></a>
                     </td>
                     </tr>
@@ -88,7 +94,7 @@
                         <td colspan="2">--------------------------------</td>
                     </tr>
                     <tr>
-                        <td colspan="2"><h4>Saturday <%=$saturday_date%> May</h4></td>
+                        <td colspan="2"><h4>Saturday <%= $saturday_date %> May</h4></td>
                     </tr>
                     <tr>
                         <td><a class="home" href="/team/U6"><h3>U6</h3></a></td>
@@ -106,7 +112,7 @@
                         <td colspan="2">--------------------------------</td>
                     </tr>
                     <tr>
-                        <td colspan="2"><h4>Sunday <%=$sunday_date%> May</h4></td>
+                        <td colspan="2"><h4>Sunday <%= $sunday_date %> May</h4></td>
                     </tr>
                     <tr>
                         <td><a class="home" href="/team/U7"><h3>U7</h3></a></td>

@@ -8,75 +8,75 @@
 
             <tr class="prop">
                 <td valign="top" class="name"><strong>Age Group</strong></td>
-                <td valign="top">${fivesTeamInstance?.ageGroup?.description}</td>
+                <td valign="top"><%=@age_group.description%></td>
             </tr>
             <tr>
                 <td valign="top" class="name"><strong>Team Name</strong></td>
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "teamName")}
-                    ${fieldValue(bean: fivesTeamInstance, field: "teamDesignation")}
+                <td valign="top"><%=@fives_team.team_name %>
+                    <%=@fives_team.team_designation %>
                 </td>
             </tr>
 
             <tr class="prop">
                 <td valign="top" class="name"><strong>Manager Name</strong></td>
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "managerName")}</td>
+                <td valign="top"><%=@fives_team.manager_name %></td>
                 <td colspan="2"></td>
             </tr>
 
             <tr class="prop">
                 <td valign="top" class="name"><strong>Home Phone</strong></td>
 
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "homePhone")}</td>
+                <td valign="top"><%=@fives_team.home_phone %></td>
 
             </tr>
             <tr class="prop">
                 <td valign="top" class="name"><strong>Mobile Phone</strong></td>
 
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "mobilePhone")}</td>
+                <td valign="top"><%=@fives_team.mobile_phone %></td>
 
             </tr>
 
             <tr class="prop">
                 <td valign="top" class="name"><strong>Email Address</strong></td>
 
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "emailAddress")}</td>
+                <td valign="top"><%=@fives_team.email_address %></td>
 
             </tr>
             <tr class="prop">
                 <td valign="top" class="name"><strong>Address</strong></td>
 
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressLine1")}</td>
+                <td valign="top"><%=@fives_team.address_line1 %></td>
 
             </tr>
             <tr class="prop">
                 <td valign="top" class="name"></td>
 
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressLine2")}</td>
+                <td valign="top"><%=@fives_team.address_line2 %></td>
 
             </tr>
             <tr class="prop">
                 <td valign="top" class="name"></td>
 
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressTown")}</td>
+                <td valign="top"><%=@fives_team.address_town %></td>
 
             </tr>
             <tr class="prop">
                 <td valign="top" class="name"></td>
 
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressCounty")}</td>
+                <td valign="top"><%=@fives_team.address_county %></td>
 
             </tr>
             <tr class="prop">
                 <td valign="top" class="name"><strong>Postcode</strong></td>
 
-                <td valign="top">${fieldValue(bean: fivesTeamInstance, field: "addressPostcode")}</td>
+                <td valign="top"><%=@fives_team.address_postcode %></td>
             </tr>
             <tr>
                 <td colspan="4">&nbsp;</td>
             </tr>
             <tr>
                 <td colspan="4">Your application reference id is
-                    <strong>${fieldValue(bean: fivesTeamInstance, field: "refId")}</strong>.
+                    <strong><%=@fives_team.ref_id %></strong>.
                 </td>
             </tr>
             </tbody>
@@ -132,7 +132,7 @@
         <div style="clear:both;">
             <br/>
 
-            <p>Please quote your reference id <strong>${fivesTeamInstance.refId}</strong> on all correspondence.</p>
+            <p>Please quote your reference id <strong><%=@fives_team.ref_id %></strong> on all correspondence.</p>
         </div>
 
     </div>

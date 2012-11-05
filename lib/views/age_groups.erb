@@ -1,0 +1,8 @@
+<h1>Age Groups</h1>
+    <p>Teams that have completed registration are listed below.</p><br/>
+    <% @age_groups.each do |age_group| %>
+        <div style="padding-left:40px;">
+            <p><%= age_group.day%> - <%= age_group.description %></p>
+        </div>
+    <% end %>
+</div>

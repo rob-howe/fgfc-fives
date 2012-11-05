@@ -4,9 +4,12 @@ gem 'sinatra'
 gem 'json'
 gem 'nokogiri'
 gem 'oj'
-gem 'activesupport'
+gem 'activesupport', '3.2.9'
 gem 'faraday'
 gem 'uagent'
+gem 'activerecord', '3.2.9'
+gem 'activemodel', '3.2.9'
+gem 'mysql2'
 
 # async calls with thin
 gem 'rack-fiber_pool'
