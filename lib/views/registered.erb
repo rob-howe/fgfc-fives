@@ -1,6 +1,5 @@
 <div class="body">
     <h1>Thank You for Your Application to the FG5's <%=$year%></h1>
-
     <div class="message">You have submitted the following details.</div>
     <div class="dialog">
         <table>
@@ -83,9 +82,16 @@
         </table>
     </div>
     <br/>
-
-    <p>An email confirming your application will be sent to you shortly.</p>
-    <br/>
+    <% if @send_mail_error %>
+       <div class="error">Unfortunately there was an error sending you a confirmation email.
+       </div>
+        <div>
+           If the email address <%=@fives_team.email_address%> you entered is incorrect please email fg5s@forestgladefc.co.uk with the correct email address.
+       </div>
+    <% else  %>
+        <p>An email confirming your application will be sent to you shortly.</p>
+    <% end %>
+        <br/>
 
     <p>If any of the above details are incorrect please email fg5s@forestgladefc.com with any alterations you wish to
         make.</p>
@@ -97,35 +103,12 @@
             <%=$year%> your entry fee is <strong>&pound;35.00</strong> provided payment
             reaches us before 31st March.</p>
         <br/>
-
-        <div style="float:left;margin-left:150px;">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="C9726VZGSU8EU">
-                <input type="hidden" name="return" value="http://www.thefg5s.co.uk/fgfc/payment/confirmed?refId=${fivesTeamInstance.refId}">
-                <input type="hidden" name="invoice" value="${fivesTeamInstance.refId}">
-                <input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_paynow_LG.gif" style="border:none;" name="submit" alt="PayPal - The safer, easier way to pay online.">
-                <img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_GB/i/scr/pixel.gif" width="1" height="1">
-            </form>
-        </div>
-    <% else %>
-        <div style="float:left;margin-left:150px;">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="8NBPM23GVDF54">
-                <input type="hidden" name="invoice" value="${fivesTeamInstance.refId}">
-                <input type="hidden" name="return" value="http://www.thefg5s.co.uk/fgfc/payment/confirmed?refId=${fivesTeamInstance.refId}">
-                <input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_paynow_LG.gif" style="border:none;" name="submit" alt="PayPal - The safer, easier way to pay online.">
-                <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-            </form>
-        </div>
     <% end %>
-    <div style="float:left;margin-top:5px;" class="tooltip" title="Pay now using PayPal's on line secure payment system, all major credit cards and debit cards are acceptable or with an existing pay pal account."></div>
-    <div style="clear:both;">
+    <div>
         <br/>
 
         <div>
-            <div style="float:left;"><p>If you don't wish to pay on-line now then please send a cheque to:</p></div>
+            <div style="float:left;"><p>Please send a cheque made payable to Forest Glade FC to:</p></div>
             <div style="float:left;">
                 <p>Lee Ashley<br/>3 Grennan Close<br/>Ingrave<br/>Brentwood<br/>Essex<br/>CM13 3YD</p></div>
         </div>

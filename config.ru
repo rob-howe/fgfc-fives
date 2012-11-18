@@ -19,11 +19,11 @@ ActiveRecord::Base.establish_connection(
 :database => ENV['SCHEMA']
 )
 
-
+year = Date.today.year
 $saturday_date = '25'
 $sunday_date = '26'
-$year = '2013'
-$season = '2012/13'
+$year =  Date.today.month > 8 ? year + 1 : year
+$season = "#{year}/#{year +1}"
 
 $closing_date = 'Friday 4th May 2012'
 $discount_end_date = 'Friday 4th May 2012'

@@ -1,8 +1,7 @@
 <h1><%= @age_group.description %> Age Group - <%= @age_group.day %></h1>
-<% if exhibition_team %>
+<% if @age_group.exhibition_team? %>
     <p>The <%= @age_group.description %> Tournament will follow the FA's guidelines for non competitive tournaments for
-        this
-        age.
+        this  age.
     </p>
     <p>Therefore the <%= @age_group.description %> tournament will be an exhibition only event.</p>
     <br/>
