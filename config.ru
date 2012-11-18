@@ -24,6 +24,10 @@ $saturday_date = '25'
 $sunday_date = '26'
 $year = '2013'
 $season = '2012/13'
+
+$closing_date = 'Friday 4th May 2012'
+$discount_end_date = 'Friday 4th May 2012'
+
 run FivesController
 
 #   heroku_d700529ea100691

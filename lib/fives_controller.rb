@@ -82,6 +82,16 @@ class FivesController < Sinatra::Base
     def exhibition_team
       false
     end
+
+    def applications_closed
+      $closing_date
+      false
+    end
+
+    def applications_closing
+      $closing_date
+      false
+    end
   end
 
  require_relative 'routes/admin'

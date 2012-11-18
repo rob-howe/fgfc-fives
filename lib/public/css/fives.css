@@ -15,10 +15,8 @@ body {
 }
 
 #header-X {
-    background: url( /images/Header-Background.png ) repeat-x;
-}
-#redback-header-X {
-    background: url( /images/RedBack-Header-Background.png ) repeat-x;
+    background-color: #000066;
+    border-radius: 5px;
 }
 
 #small_page_heading {

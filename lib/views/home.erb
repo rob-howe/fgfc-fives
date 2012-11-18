@@ -1,60 +1,54 @@
-        <style type="text/css" media="screen">
+<div id="pageBody">
+    <h1 id="top_heading">The Forest Glade Fives - <%= $year %></h1>
+    <% if applications_closed %>
+        <p><span style="color:red">*** Please <strong>NOTE</strong> applications are now closed </strong>***</span><br/>
+        </p>
 
-        .homePagePanel * {
-            margin:0px;
-        }
-        .homePagePanel .panelBody ul {
-            list-style-type:none;
-            margin-bottom:10px;
-        }
-        .homePagePanel .panelBody h1 {
-            text-transform:uppercase;
-            font-size:1.1em;
-            margin-bottom:10px;
-        }
-        .homePagePanel .panelBody {
-            background: url(/images/leftnav_midstretch.png) repeat-y top;
-            margin:0px;
-            padding:15px;
-        }
-        .homePagePanel .panelBtm {
-            background: url(/images/leftnav_btm.png) no-repeat top;
-            height:20px;
-            margin:0px;
-        }
+        <p><span style="color:red">* To be placed on the reserve list please contact Lee Ashley on  07507 291485 or email fg5s@forestgladefc.com *</span><br/><br/>
+        </p>
+    <% end %>
+    <% if applications_closing %>
+        <p>
+            <span style="color:red">*** Please <strong>NOTE</strong> the closing date for applications and payment is <strong><%= $closing_date %></strong> ***</span><br/><br/>
+        </p>
+    <% end %>
+    <p>The Forest Glade Fives has been running as a tournament since 2000 and has become one of the premier end of
+        season 5 a-side football events for clubs in the South of England.</p>
+    <br/>
 
-        .homePagePanel .panelTop {
-            background: url(/images/leftnav_top.png) no-repeat top;
-            height:11px;
-            margin:0px;
-        }
-        h2 {
-            margin-top:15px;
-            margin-bottom:15px;
-            font-size:1.2em;
-        }
-        </style>
-        <div id="pageBody">
-            <h1 id="top_heading">The Forest Glade Fives - <%=$year%></h1>
-            <p><span style="color:red">*** Please <strong>NOTE</strong> applications are now closed </strong> ***</span><br/></p>
-            <p><span style="color:red">* To be placed on the reserve list please contact Lee Ashley on  07507 291485 or email fg5s@forestgladefc.com *</span><br/><br/></p>
-            %{--<p><span style="color:red">*** Please <strong>NOTE</strong> the closing date for applications and payment is <strong>Friday 4th May 2012</strong> ***</span><br/><br/></p>--}%
-            <p>The Forest Glade Fives has been running as a tournament since 2000 and has become one of the premier end of season 5 a-side football events for clubs in the South of England.</p>
-            <br/>
-            <p>Teams are to consist of five players with up to five substitutes for age groups U7 to U10 and three substitutes for age groups U11 to U18. The U6 age group will play 7-a-side mini soccer instead of 5 a-side.</p>
-            <br/>
-            <p>In previous years the two day tournament has attracted around 130 teams and over 2000 visitors to the ground.</p>
-	        <br/>
-            <p>The FG5s has earned a reputation as a fair and sporting event with a high standard of football. The tournament is also well known as being very efficiently run and organised.</p>
-            <br/>
-            <p>Each age group will have a league stage followed by a knock-out stage. It is planned that each team will have a minimum of at least 4 games.</p><br/>
-            <p>Games in the league stages will be 2 halves of 5 minutes each in duration.</p><br/>
-            <p>Trophies will be presented to all players in Winning teams and the Runners-Up. </p><br/>
-            <p>The tournament is expected to commence, with registration and manager meetings at 09:00, with the Finals at 16:00 on both days.</p>
-               <br/>
-            <p>Teams in the U6, U7 and U8 age group will participate in an exhibition only event, following the FA guide lines for these age groups</p><br/>
-            <p>As always, whilst the football is the major attraction, around the ground there is planned to be other interests, such as a BBQ, Hot and Cold Refreshments and a Sweet tent. Making this an event for all the family to attend.</p><br/>
-             %{--<p>The entry fee is &pound;40 per team.</p>--}%
-             <p>The entry fee is &pound;40 per team. There is a &pound;5 discount for teams registered before the 31st March 2012.</p>
-            <p>Please note: fees are non-refundable for any entries withdrawn after 1st April 2012</p>
-        </div>
+    <p>Teams are to consist of five players with up to five substitutes for age groups U7 to U10 and three substitutes
+        for age groups U11 to U18. The U6 age group will play 7-a-side mini soccer instead of 5 a-side.</p>
+    <br/>
+
+    <p>In previous years the two day tournament has attracted around 130 teams and over 2000 visitors to the ground.</p>
+    <br/>
+
+    <p>The FG5s has earned a reputation as a fair and sporting event with a high standard of football. The tournament is
+        also well known as being very efficiently run and organised.</p>
+    <br/>
+
+    <p>Each age group will have a league stage followed by a knock-out stage. It is planned that each team will have a
+        minimum of at least 4 games.</p><br/>
+
+    <p>Games in the league stages will be 2 halves of 5 minutes each in duration.</p><br/>
+
+    <p>Trophies will be presented to all players in Winning teams and the Runners-Up. </p><br/>
+
+    <p>The tournament is expected to commence, with registration and manager meetings at 09:00, with the Finals at 16:00
+        on both days.</p>
+    <br/>
+
+    <p>Teams in the U6, U7 and U8 age group will participate in an exhibition only event, following the FA guide lines
+        for these age groups</p><br/>
+
+    <p>As always, whilst the football is the major attraction, around the ground there is planned to be other interests,
+        such as a BBQ, Hot and Cold Refreshments and a Sweet tent. Making this an event for all the family to
+        attend.</p><br/>
+    <% if discount_applicable %>
+        <p>The entry fee is &pound;40 per team. There is a <strong>&pound;5 discount</strong> for teams registered before the 31st March
+            <%=$year%>.</p>
+    <% else %>
+        <p>The entry fee is &pound;40 per team.</p>
+    <% end %>
+    <p>Please note: fees are non-refundable for any entries withdrawn after 1st April <%=$year%></p>
+</div>
