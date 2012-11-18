@@ -1,8 +1,7 @@
 body {
     font-size: 0.85em; /*font-family:  Georgia, serif;*/
     font-family: Arial, Verdana, Helvetica, sans-serif;
-    background-image: url( /images/page-background.png );
-    background-repeat: repeat-x;
+    background-color: #ccccff;
     padding-top: 20px;
 }
 
