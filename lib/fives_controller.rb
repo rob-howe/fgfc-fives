@@ -3,9 +3,11 @@ require 'model/age_group'
 require 'model/fives_team'
 require 'model/user'
 require 'model/summary'
+require 'tilt'
+require 'pony'
 
 class FivesController < Sinatra::Base
-
+  @@confirmation_template = Tilt.new("#{File.dirname(__FILE__)}/email_templates/confirmation.erb")
 
   get '/' do
     erb :home
@@ -33,6 +35,7 @@ class FivesController < Sinatra::Base
         :date_registered => Time.now
     )
     @age_group = AgeGroup.find(params[:age_group_id].to_i)
+    send_confirmation_mail @fives_team, @age_group
     erb :registered
   end
 
@@ -92,9 +95,30 @@ class FivesController < Sinatra::Base
       $closing_date
       false
     end
+
+    def send_confirmation_mail fives_team, age_group
+
+      mail_text = @@confirmation_template.render(nil, {:fives_team => fives_team, :age_group => age_group, :discount_applicable => discount_applicable})
+      Pony.mail(
+          :from => 'forest glade fives' + "<fg5s@forestgladefc.co.uk>",
+          :to => 'robert.howe@gmail.com',
+          :subject => "The Forest Glade Fives - Application Confirmation - Your Reference: "  + fives_team.ref_id,
+          :body => mail_text,
+          :port => '587',
+          :via => :smtp,
+          :via_options => {
+              :address => 'smtp.gmail.com',
+              :port => '587',
+              :enable_starttls_auto => true,
+              :user_name => 'sysadmin@forestgladefc.co.uk',
+              :password => 'f0restg!ade',
+              :authentication => :plain,
+              :domain => 'localhost.localdomain'
+          })
+    end
   end
 
- require_relative 'routes/admin'
- require_relative 'routes/error'
- require_relative 'routes/payment'
+  require_relative 'routes/admin'
+  require_relative 'routes/error'
+  require_relative 'routes/payment'
 end

@@ -10,7 +10,7 @@ gem 'uagent'
 gem 'activerecord', '3.2.9'
 gem 'activemodel', '3.2.9'
 gem 'mysql2'
-
+gem 'pony'
 # async calls with thin
 gem 'rack-fiber_pool'
 gem 'em-synchrony'
