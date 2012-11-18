@@ -21,7 +21,7 @@ class FivesController < Sinatra::Base
     if user
       session[:user] = user
       session[:user_name] = user.name
-      redirect('/')
+      redirect('/admin/summary')
     else
       @message = "Sorry, the details you have provided seem to be incorrect. Please try again."
       erb :login
@@ -31,9 +31,14 @@ class FivesController < Sinatra::Base
 
   get '/admin/summary' do
     @summary = Summary.find(:all)
-    erb :summary
+    erb :'admin/summary'
   end
 
+  get '/admin/age_group' do
+    @fives_teams = FivesTeam.find_all_by_age_group_id(params[:age_group_id]) unless params[:age_group_id].nil?
+    @age_group = AgeGroup.find(params[:age_group_id].to_i)
+    erb :'admin/age_group_list'
+  end
 
   get '/admin/excel' do
     @fives_teams = FivesTeam.find(:all, :order => "age_group_id")
@@ -47,7 +52,12 @@ class FivesController < Sinatra::Base
     erb :'admin/edit_team'
   end
 
+  get '/admin/find' do
+    @fives_team = FivesTeam.find(params[:ref_id].to_i)
+    @age_group = AgeGroup.find(@fives_team.age_group_id)
+    erb :'admin/show_team'
 
+  end
   post '/admin/find' do
     @fives_team = FivesTeam.find(params[:ref_id].to_i)
     @age_group = AgeGroup.find(@fives_team.age_group_id)
