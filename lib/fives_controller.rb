@@ -103,7 +103,7 @@ class FivesController < Sinatra::Base
           :from => 'forest glade fives' + "<fg5s@forestgladefc.co.uk>",
           :to => 'robert.howe@gmail.com',
           :subject => "The Forest Glade Fives - Application Confirmation - Your Reference: "  + fives_team.ref_id,
-          :body => mail_text,
+          :html_body => mail_text,
           :port => '587',
           :via => :smtp,
           :via_options => {
