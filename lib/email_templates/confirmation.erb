@@ -5,8 +5,8 @@
 <p><div style="font-size:30px;color:#00008b;"><strong>The Forest Glade Fives <%=$year%></strong></div></p>
 <br/>
 <p><h1>Thank you for your application.</h1></p>
- <p>The details you provided are as follows;</p>
-<table>
+<p>The details you provided are as follows;</p>
+<table style="margin-left: 20px;">
     <tbody>
     <tr class="prop">
       <td valign="top" class="name"><strong>Age Group</strong></td>
@@ -73,11 +73,11 @@
     </tbody>
     </table>
 
-<p>If any of the above details are incorrect please email fg5s@forestgladefc.com with any alterations you wish to make.</p>
+<p>If any of the above details are incorrect please email fg5s@forestgladefc.co.uk with any alterations you wish to make.</p>
 <br/>
 <% if discount_applicable %>
-      <p>The entry fee is &pound;40 per team. There is a &pound;5 <strong>discount</strong> for teams registered before the 31st March ${grailsApplication.config.fives.year}.</p>
-      <p>As the discount is applicable your entry fee is &pound;35.00, if you <strong>DID NOT</strong> pay on line then please make your cheque out for this amount.</p>
+      <p>The entry fee is &pound;40 per team. There is a &pound;5 <strong>discount</strong> for teams registered before the 31st March <%=$year%>.</p>
+      <p>As the discount is applicable your entry fee is &pound;35.00, if you <strong>DID NOT</strong> pay on-line then please make your cheque out for this amount.</p>
 <% else %>
         <p>The entry fee is &pound;40 per team, if you <strong>DID NOT</strong> pay on-line then please make your cheque out for this amount.</p>
 <% end %>
