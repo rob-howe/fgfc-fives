@@ -43,7 +43,6 @@
             </tr>
             <% age_group = team.age_group.description %>
             <% display_age_group = team.age_group.description %>
-            </g:else>
             <tr>
                 <td><%= display_age_group %></td>
                 <td><%= team.ref_id %></td>
@@ -69,11 +68,11 @@
                         no
                     <% end %>
                 </td>
-                <td><%= team.address_line1 %><%='nbsp;' if team.address_line1.nil? %></td>
-                <td><%= team.address_line2 %><%='nbsp;' if team.address_line2.nil? %></td>
-                <td><%= team.address_town %><%='nbsp;' if team.town.nil? %></td>
-                <td><%= team.address_county %><%='nbsp;' if team.address_county.nil? %></td>
-                <td><%= team.address_postcode %><%='nbsp;' if team.address_postcode.nil? %></td>
+                <td><%= team.address_line1 %><%='&nbsp;' if team.address_line1.nil? %></td>
+                <td><%= team.address_line2 %><%='&nbsp;' if team.address_line2.nil? %></td>
+                <td><%= team.address_town %><%='&nbsp;' if team.town.nil? %></td>
+                <td><%= team.address_county %><%='&nbsp;' if team.address_county.nil? %></td>
+                <td><%= team.address_postcode %><%='&nbsp;' if team.address_postcode.nil? %></td>
             </tr>
         <% end %>
     <% end %>
