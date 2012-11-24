@@ -25,9 +25,9 @@
         <td style="background-color:blue;color:white;font-weight:bold;">Paid</td>
         <td style="background-color:blue;color:white;font-weight:bold;">PayPal</td>
         <td style="background-color:blue;color:white;font-weight:bold;">Address</td>
-        <td style="background-color:blue;color:white;font-weight:bold;"></td>
-        <td style="background-color:blue;color:white;font-weight:bold;"></td>
-        <td style="background-color:blue;color:white;font-weight:bold;"></td>
+        <td style="background-color:blue;color:white;font-weight:bold;">&nbsp;</td>
+        <td style="background-color:blue;color:white;font-weight:bold;">&nbsp;</td>
+        <td style="background-color:blue;color:white;font-weight:bold;">&nbsp;</td>
         <td style="background-color:blue;color:white;font-weight:bold;">Postcode</td>
     </tr>
     </thead>
@@ -39,7 +39,7 @@
             <% display_age_group='&nbsp;' %>
         <% else %>
             <tr>
-                <td colspan="13">&nbsp;</td>
+                <td colspan="15">&nbsp;</td>
             </tr>
             <% age_group = team.age_group.description %>
             <% display_age_group = team.age_group.description %>
@@ -48,9 +48,9 @@
                 <td><%= display_age_group %></td>
                 <td><%= team.ref_id %></td>
                 <td><%= team.team_name %></td>
-                <td><%= team.team_designation %></td>
+                <td><%= team.team_designation %><%='&nbsp;' if team.designation.nil? %></td>
                 <td><%= team.manager_name %></td>
-                <td><%= team.home_phone %></td>
+                <td><%= team.home_phone %><%='&nbsp;' if team.home_phone.nil? %></td>
                 <td><%= team.mobile_phone %></td>
                 <td><%= team.email_address %></td>
                 <% if team.paid %>
@@ -69,11 +69,11 @@
                         no
                     <% end %>
                 </td>
-                <td><%= team.address_line1 %></td>
-                <td><%= team.address_line2 %></td>
-                <td><%= team.address_town %></td>
-                <td><%= team.address_county %></td>
-                <td><%= team.address_postcode %></td>
+                <td><%= team.address_line1 %><%='nbsp;' if team.address_line1.nil? %></td>
+                <td><%= team.address_line2 %><%='nbsp;' if team.address_line2.nil? %></td>
+                <td><%= team.address_town %><%='nbsp;' if team.town.nil? %></td>
+                <td><%= team.address_county %><%='nbsp;' if team.address_county.nil? %></td>
+                <td><%= team.address_postcode %><%='nbsp;' if team.address_postcode.nil? %></td>
             </tr>
         <% end %>
     <% end %>
