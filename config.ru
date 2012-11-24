@@ -16,9 +16,12 @@ ActiveRecord::Base.establish_connection(
 :host => ENV['DATABASE_URL'],
 :username => ENV['USER_NAME'],
 :password => ENV['PASSWORD'],
-:database => ENV['SCHEMA']
+:database => ENV['SCHEMA'],
+:reconnect => true
 )
 
+#$age_groups = AgeGroup.find(:all)
+#$user = User.find(:all)
 year = Date.today.year
 $saturday_date = '25'
 $sunday_date = '26'

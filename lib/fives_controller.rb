@@ -112,7 +112,7 @@ class FivesController < Sinatra::Base
         mail_text = @@confirmation_template.render(nil, {:fives_team => fives_team, :age_group => age_group, :discount_applicable => discount_applicable})
         Pony.mail(
             :from => 'forest glade fives' + "<fg5s@forestgladefc.co.uk>",
-            :to => 'robert.howe@gmail.com',
+            :to => fives_team.email_address,
             :subject => "The Forest Glade Fives - Application Confirmation - Your Reference: " + fives_team.ref_id,
             :html_body => mail_text,
             :port => '587',
@@ -121,8 +121,8 @@ class FivesController < Sinatra::Base
                 :address => 'smtp.gmail.com',
                 :port => '587',
                 :enable_starttls_auto => true,
-                :user_name => 'sysadmin@forestgladefc.co.uk',
-                :password => 'f0restg!ade',
+                :user_name => 'fg5s@forestgladefc.co.uk',
+                :password => 'fives-f0restg!ade',
                 :authentication => :plain,
                 :domain => 'localhost.localdomain'
             })
