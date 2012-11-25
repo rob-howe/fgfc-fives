@@ -9,6 +9,20 @@
     <script type="text/javascript" src="/script/application.js"></script>
     <script type="text/javascript" src="/script/validation.js"></script>
     <link rel="icon" type="image/ico" href="http://www.thefg5s.co.uk/fgfc/images/favicon.ico"/>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36606370-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </head>
 <body>
 <div id="body_container">
@@ -33,10 +47,10 @@
     <div id="content_wrapper">
         <div id="top_frame">
             <div style="width:132px;display: inline-block;height: 140px;">
-            <img src="/images/fg5s-small-logo-no-year.png" alt="FG5's" style="vertical-align:top;margin-left:8px;margin-right:5px;"/>
-            <span style="color:#006;margin-left: 22px;;position: relative;top:-7px;font-size: 39px;font-weight: bold;">2013</span>
+                <img src="/images/fg5s-small-logo-no-year.png" alt="FG5's" style="vertical-align:top;margin-left:8px;margin-right:5px;"/>
+                <span style="color:#006;margin-left: 22px;;position: relative;top:-7px;font-size: 39px;font-weight: bold;">2013</span>
             </div>
-                <img src="/images/WebHome3.png" alt="banner"/>
+            <img src="/images/WebHome3.png" alt="banner"/>
             <img src="/images/WebHome1.png" alt="banner"/>
             <img src="/images/WebHome6.png" alt="banner"/>
             <img src="/images/WebHome4.png" alt="banner"/>
@@ -157,7 +171,7 @@
                 </div>
             </div>
         </div>
-        <div id="footer"> &copy;<%=$season%> Forest Glade Football Club</div>
+        <div id="footer"> &copy;<%= $season %> Forest Glade Football Club</div>
     </div>
 </div>
 </body>
