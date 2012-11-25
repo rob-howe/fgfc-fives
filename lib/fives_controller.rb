@@ -53,12 +53,6 @@ class FivesController < Sinatra::Base
 
   end
 
-  get '/age_groups' do
-    @age_groups = AgeGroup.find(:all)
-    erb :age_groups
-  end
-
-
   get '/contacts' do
     erb :contacts
   end
