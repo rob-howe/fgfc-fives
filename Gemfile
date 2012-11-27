@@ -1,11 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'sinatra'
-gem 'json'
-gem 'nokogiri'
-gem 'oj'
 gem 'activesupport', '3.2.9'
-gem 'faraday'
 gem 'uagent'
 gem 'activerecord', '3.2.9'
 gem 'activemodel', '3.2.9'
@@ -27,10 +23,7 @@ group :development do
   gem 'rspec'
   gem 'webmock'
   gem 'page-object'
-  gem 'jsonify'
   gem 'savon'
   gem 'colorize'
-  gem 'cover_me'
   gem 'chromedriver-helper'
-  gem 'parallel_tests'
 end
