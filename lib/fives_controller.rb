@@ -3,6 +3,7 @@ require 'model/age_group'
 require 'model/fives_team'
 require 'model/user'
 require 'model/summary'
+require 'model/mailing_target'
 require 'tilt'
 require 'pony'
 class SendMailError < StandardError
@@ -79,6 +80,25 @@ class FivesController < Sinatra::Base
     @fives_teams = FivesTeam.find_all_by_age_group_id_and_paid(@age_group.id, false) unless @age_group.nil?
 
     erb :team
+  end
+
+  get '/email' do
+    @email_address = params[:email_address]
+    if @email_address
+      begin
+        email_target = MailingTarget.find_by_email_address(@email_address)
+        if email_target
+          email_target.opted_out = true
+          email_target.save
+        else
+          @email_not_found = true
+        end
+      rescue => ex
+        @email_save_error = true
+        puts "Error saving email opt out email:#{@email_address} error was #{ex.message}"
+      end
+    end
+    erb :email_opt_out
   end
 
   helpers do

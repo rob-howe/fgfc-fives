@@ -1,0 +1,12 @@
+<div class="body">
+    <h1>Unsubscribe from the Contacts List</h1>
+    <% if @email_not_found %>
+        <p>Unfortunately we cannot find your email address (<%= @email_address %>) to remove from our list. If this is
+            incorrect please email <strong>fg5s@forestgladefc.co.uk</strong> and we'll attempt to fix this problem.</p>
+    <% elsif @email_save_error %>
+        <p>Unfortunately we've had problem removing (<%= @email_address %>) from our mailing list, please tray again alter.</p>
+    <% else %>
+        <p>Thank you <%= @email_address %> has been removed from our mailing list.</p>
+    <% end %>
+    <p></p>
+</div>
