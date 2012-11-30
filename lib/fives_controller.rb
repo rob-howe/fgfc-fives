@@ -82,24 +82,6 @@ class FivesController < Sinatra::Base
     erb :team
   end
 
-  get '/email' do
-    @email_address = params[:email_address]
-    if @email_address
-      begin
-        email_target = MailingTarget.find_by_email_address(@email_address)
-        if email_target
-          email_target.opted_out = true
-          email_target.save
-        else
-          @email_not_found = true
-        end
-      rescue => ex
-        @email_save_error = true
-        puts "Error saving email opt out email:#{@email_address} error was #{ex.message}"
-      end
-    end
-    erb :email_opt_out
-  end
 
   helpers do
     def discount_applicable
@@ -150,4 +132,5 @@ class FivesController < Sinatra::Base
   require_relative 'routes/admin'
   require_relative 'routes/error'
   require_relative 'routes/payment'
+  require_relative 'routes/email'
 end
