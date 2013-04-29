@@ -1,12 +1,11 @@
 <div id="pageBody">
-    <h1 id="top_heading">The Forest Glade Fives - <%= $year %></h1>
+    <h1 id="top_heading">The Forest Glade Fives - <%= $fives_year %></h1>
     <% if applications_closed %>
-        <p><span style="color:red">*** Please <strong>NOTE</strong> applications are now closed </strong>***</span><br/>
-        </p>
-
-        <p><span style="color:red">* To be placed on the reserve list please contact Lee Ashley on  07507 291485 or email fg5s@forestgladefc.com *</span><br/><br/>
-        </p>
-    <% end %>
+        <br/>
+                <span style="color:red;font-size: 20px;">*** <strong>Please Note:</strong> Online applications have now closed ***<br/><br/></span>
+                    <span style="color:red;font-size: 16px;">Any enquiries should be made by email to:fg5s@forestgladefc.co.uk or by<br/> phone/text on: 07507-291485</span>
+                <br/>
+                <br/>   <% end %>
     <% if applications_closing %>
         <p>
             <span style="color:red">*** Please <strong>NOTE</strong> the closing date for applications and payment is <strong><%= $closing_date %></strong> ***</span><br/><br/>
@@ -48,9 +47,9 @@
         attend.</p><br/>
     <% if discount_applicable %>
         <p>The entry fee is &pound;40 per team. There is a <strong>&pound;5 discount</strong> for teams registered before the 31st March
-            <%=$year%>.</p>
+            <%=$fives_year%>.</p>
     <% else %>
         <p>The entry fee is &pound;40 per team.</p>
     <% end %>
-    <p>Please note: fees are non-refundable for any entries withdrawn after 1st April <%=$year%></p>
+    <p>Please note: fees are non-refundable for any entries withdrawn after 1st April <%=$fives_year%></p>
 </div>
