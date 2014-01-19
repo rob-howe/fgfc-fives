@@ -4,13 +4,13 @@
         this  age.
     </p>
     <p>Therefore the <%= @age_group.description %> tournament will be an exhibition only event.</p>
+    <% if @age_group.description == 'U6' %>
+        <br/>
+        <p>The U6 age group will play training only games.</p>
+    <% end %>
+
     <br/>
     <p>All participants will receive a commemorative medal.</p>
-<% end %>
-
-<% if @age_group.description == 'U6' %>
-    <br/>
-    <p>The U6 age group will also play 7-a-side mini soccer instead of 5 a-side.</p>
 <% end %>
 
 <div>
