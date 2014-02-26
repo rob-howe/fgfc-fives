@@ -1,0 +1,322 @@
+html
+  head
+    css:
+      body {
+        font-family:Verdana;
+        font-size: 14px;
+        margin:0;
+        padding:0;
+      }
+      ul {
+        list-style-type:none;
+        margin:0;
+        padding: 0 15px;
+      }
+
+      ul li {
+        padding: 0 5px;
+        display:inline-block ;
+        width:50px;
+        text-align:center;
+      }
+      ul.normal {
+        padding: 0 25px;
+      }
+      ul.normal li,
+      ul.side-bar  li {
+         padding: 0;
+         display: block;
+         text-align:left;
+         width:100%;
+      }
+      ul.side-bar {
+        padding: 0;
+      }
+      .header {
+        width:100%;
+        color:white;
+        background-color:#000066;
+        font-size:36px;
+        padding:12px;
+        height:80px;
+      }
+      .left-column {
+        padding:0 10px;
+        float:left;
+        width:26%;
+        font-size:11px;
+        background-color:lightgrey;
+        height:819px;
+      }
+      .right-column {
+        margin:0 0 0 10px;
+        float:left;
+        width:69%;
+        height:819px;
+      }
+      .clear {
+        clear:both;
+      }
+      .smaller {
+        font-size:10px;
+      }
+      .url {
+        color:blue;
+      }
+      .team_spacer {
+        margin-top:50px;
+        margin-bottom:132px;
+      }
+      .designation_spacer {
+        margin-top:90px;
+        margin-bottom:80px;
+      }
+      .left-bar-spacer {
+          padding-bottom:16px;
+      }
+      table {
+        margin-top:25px;
+        line-height:30px;
+      }
+      .indented {
+        margin-left:10px;
+      }
+      .regular {
+          font-size:12px;
+      }
+
+  body
+    div.header
+      | The Forest Glade Fives <br/>
+        May 24th & May 25th #{$fives_year}
+    div.left-column
+      == slim :fives_app_left_bar
+    div.right-column
+      p
+        | The Forest Glade Fives has been running as a
+          tournament since 2000 and has become one of
+          the premier end of season 5 a-side football
+          events for clubs in the South of England.
+
+      h2.indented #{$saturday_date} #{$fives_year}
+
+      ul
+        li U6
+        li U8
+        li U10
+        li U12
+        li U14
+        li U16
+      ul
+        li.smaller exhibition
+        li.smaller exhibition
+        li
+        li
+        li
+        li
+
+      h2.indented #{$sunday_date} #{$fives_year}
+      ul
+        li U7
+        li U9
+        li U11
+        li U13
+        li U15
+        li U18
+      ul
+        li.smaller exhibition
+        li
+        li
+        li
+        li
+        li
+
+      ul
+        li
+        li U12Girls
+        li
+        li U14Girls
+
+      p Age Groups as per the 2013/2014 season
+
+      p
+        | The FG5s has earned a reputation as a fair and sporting
+          event with a high standard of football. The tournament
+          is also well known as being very efficiently run and
+          organised. In previous years the two day tournament has
+          attracted around 140 teams and over 2000 visitors to the ground.
+
+
+      p
+        | Please complete and return the
+          attached form along with your
+          entry fee of £40 per team. There
+          is a £5 discount for entries made
+          before March 31st.
+      p
+        | Please note: fees are non-
+          refundable for any entries
+          withdrawn after April 1st 2014
+
+      p
+        | All teams will receive a
+          communication confirming their entry. Please contact us
+          again if you do not hear from us within a reasonable
+          time to confirm your entry.
+      p
+        | For up to date information visit:<br/>
+        span.url
+          ' www.theFG5s.co.uk
+        ' or
+        span.url www.ForestGladeFC.co.uk
+
+      p
+        | Please send completed
+          applications and entrance
+          fee to:
+        ul.normal.indented
+          li Lee Ashley
+          li 3 Grennan Close,
+          li Ingrave,
+          li Brentwood,
+          li Essex
+          li CM13 3YD
+      p
+        ' Or you can register your team for the
+          tournament via the official site:
+        span.url
+          ' www.theFG5s.co.uk
+        ' or email:
+        span.url  FG5s@forestgladefc.co.uk
+
+    div.clear
+    div.header
+      | The Forest Glade Fives <br/>
+        May 24th & May 25th 2014
+    div.left-column
+      p
+       ' <strong>Please use a different entry
+         form for each team entered.</strong>
+         More application forms are
+         available at
+       span.url www.theFG5s.co.uk
+      p
+      p.team_spacer
+        | Please <strong>circle</strong> one
+          age group for your team.
+          Age groups are as of the
+          $season season.
+
+      p.designation_spacer
+        | To distinguish your team
+          from other teams in your club
+          at the same age group enter
+          a distinct name in the
+          <strong>Designation</strong> field.
+          Examples United,City,Storm or
+          any name you'd prefer.
+
+      p.left-bar-spacer
+        ' Full <strong>Rules & Regulations</strong> for
+          the FG5s #{$fives_year} are published
+          on the website
+        span.url  www.theFG5s.co.uk
+      p
+        | <strong>League registration cards</strong> or
+          <strong>proof of age</strong> will be needed
+          on the day for verification.
+      p.left-bar-spacer
+        | Players do need to be
+          registered with a league.
+      p style="margin-bottom:25px;"
+        | Should you have <strong>any further
+          questions</strong> please contact
+        ul.side-bar.smaller
+          li Lee Ashley: 07507 291485
+          li Derrick Pearson: 0845 4735845
+          li Mike Burchett: 01268 411039
+      p.left-bar-spacer
+        | #{' '}
+    div.right-column
+      h2 Team Entry Form
+
+      h3
+        ' Age Groups:
+        span.regular
+          | (please circle one)
+
+      h3.indented #{$saturday_date} #{$fives_year}
+
+      ul
+        li U6
+        li U8
+        li U10
+        li U12
+        li U14
+        li U16
+
+      h3.indented #{$sunday_date} #{$fives_year}
+      ul
+        li U7
+        li U9
+        li U11
+        li U13
+        li U15
+        li U18
+      p
+        | #{' '}
+      ul
+        li
+        li U12Girls
+        li
+        li U14Girls
+
+      table
+        tr
+          td Team Name:
+          td ..............................................................
+        tr
+          td Designation:
+          td ..............................................................
+        tr
+          td Manager Name:
+          td ..............................................................
+        tr
+          td Email Address:
+          td ..............................................................
+        tr
+          td Mobile Phone:
+          td ..............................................................
+        tr
+          td Home Phone:
+          td ..............................................................
+        tr
+          td Address:
+          td ..............................................................
+        tr
+          td
+          td ..............................................................
+        tr
+          td
+          td ..............................................................
+        tr
+          td Postcode:
+          td .................................
+
+      p
+        | Please send your
+          completed entry form along
+          with your entrance fee to:
+
+      ul.normal.indented
+        li Lee Ashley
+        li 3 Grennan Close,
+        li Ingrave,
+        li Brentwood,
+        li CM13 3YD
+
+      p style="margin-bottom:0;"
+        | The entrance fee is <strong>£40</strong>, or £35 if submitting your
+          application before the 1st April.
+          Cheques should be made payable to
+          Forest Glade FC.

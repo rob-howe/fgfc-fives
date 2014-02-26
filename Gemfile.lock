@@ -48,6 +48,7 @@ GEM
       json (>= 1.4.6)
     gyoku (0.4.6)
       builder (>= 2.1.2)
+    hike (1.2.3)
     http_parser.rb (0.5.3)
     httpi (1.1.1)
       rack
@@ -67,6 +68,7 @@ GEM
     page-object (0.7.5.1)
       selenium-webdriver (>= 2.25.0)
       watir-webdriver (>= 0.6.1)
+    pdfkit (0.5.4)
     polyglot (0.3.3)
     pony (1.4)
       mail (> 2.0)
@@ -104,6 +106,15 @@ GEM
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
       tilt (~> 1.3, >= 1.3.3)
+    slim (2.0.2)
+      temple (~> 0.6.6)
+      tilt (>= 1.3.3, < 2.1)
+    sprockets (2.10.1)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    temple (0.6.7)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -122,6 +133,7 @@ GEM
     webmock (1.9.0)
       addressable (>= 2.2.7)
       crack (>= 0.1.7)
+    wkhtmltopdf-binary (0.9.9.1)
 
 PLATFORMS
   ruby
@@ -137,6 +149,7 @@ DEPENDENCIES
   em-synchrony
   mysql2
   page-object
+  pdfkit
   pony
   rack-fiber_pool
   rack-ssl-enforcer
@@ -145,7 +158,10 @@ DEPENDENCIES
   ruby-debug-ide
   savon
   sinatra
+  slim
+  sprockets (~> 2.0)
   thin
   uagent
   watir-webdriver
   webmock
+  wkhtmltopdf-binary

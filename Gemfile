@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'sinatra'
+gem 'slim'
 gem 'activesupport', '3.2.9'
 gem 'uagent'
 gem 'activerecord', '3.2.9'
@@ -14,6 +15,10 @@ gem 'em-http-request'
 # async calls with thin
 gem 'thin'
 gem 'rack-ssl-enforcer'
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
+gem 'sprockets', '~> 2.0'
+
 
 group :development do
   gem 'cucumber'

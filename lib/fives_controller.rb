@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'slim'
 require 'model/age_group'
 require 'model/fives_team'
 require 'model/user'
@@ -80,6 +81,10 @@ class FivesController < Sinatra::Base
     @fives_teams = FivesTeam.find_all_by_age_group_id_and_paid(@age_group.id, true) unless @age_group.nil?
 
     erb :team
+  end
+
+  get '/app_form' do
+    slim :fives_app_form, layout: false
   end
 
 

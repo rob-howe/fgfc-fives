@@ -4,6 +4,9 @@ require "fives_controller"
 require 'active_record'
 require 'mysql2'
 
+require 'pdfkit'
+use PDFKit::Middleware
+
 puts "ENV['DATABASE_URL']=#{ENV['DATABASE_URL']}"
 
 ENV['DATABASE_URL'] = 'localhost' if ENV['DATABASE_URL'].nil?
@@ -25,8 +28,8 @@ ActiveRecord::Base.establish_connection(
 year = Date.today.year
 $saturday_date = 'Saturday 24th May'
 $sunday_date = 'Sunday 25th May'
-$fives_year =  Date.today.month > 8 ? year + 1 : year
-season_year =  Date.today.month < 8 ? year - 1 : year
+$fives_year = Date.today.month > 8 ? year + 1 : year
+season_year = Date.today.month < 8 ? year - 1 : year
 $season = "#{season_year}/#{season_year + 1}"
 
 $closing_date = 'Friday 2nd May 2014'
