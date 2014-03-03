@@ -5,7 +5,7 @@ require 'active_record'
 require 'mysql2'
 
 require 'pdfkit'
-use PDFKit::Middleware
+use PDFKit::Middleware, {}, :only => '/app_form'
 
 puts "ENV['DATABASE_URL']=#{ENV['DATABASE_URL']}"
 
