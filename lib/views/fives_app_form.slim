@@ -88,7 +88,7 @@ html
   body
     div.header
       | The Forest Glade Fives <br/>
-        May 24th & May 25th #{$fives_year}
+        #{$saturday_date} & #{$sunday_date} #{$fives_year}
     div.left-column
       == slim :fives_app_left_bar
     div.right-column
@@ -98,7 +98,7 @@ html
           the premier end of season 5 a-side football
           events for clubs in the South of England.
 
-      h2.indented #{$saturday_date} #{$fives_year}
+      h2.indented Saturday #{$saturday_date} #{$fives_year}
 
       ul
         li U6
@@ -115,7 +115,7 @@ html
         li
         li
 
-      h2.indented #{$sunday_date} #{$fives_year}
+      h2.indented Sunday #{$sunday_date} #{$fives_year}
       ul
         li U7
         li U9
@@ -137,7 +137,7 @@ html
         li
         li U14Girls
 
-      p Age Groups as per the 2013/2014 season
+      p Age Groups as per the #{$season} season
 
       p
         | The FG5s has earned a reputation as a fair and sporting
@@ -156,7 +156,7 @@ html
       p
         | Please note: fees are non-
           refundable for any entries
-          withdrawn after April 1st 2014
+          withdrawn after April 1st #{$fives_year}
 
       p
         | All teams will receive a
@@ -192,14 +192,14 @@ html
     div.clear
     div.header
       | The Forest Glade Fives <br/>
-        May 24th & May 25th 2014
+        May 24th & May 25th #{$fives_year}
     div.left-column
       p
-       ' <strong>Please use a different entry
-         form for each team entered.</strong>
-         More application forms are
-         available at
-       span.url www.theFG5s.co.uk
+        ' <strong>Please use a different entry
+          form for each team entered.</strong>
+          More application forms are
+          available at
+        span.url www.theFG5s.co.uk
       p
       p.team_spacer
         | Please <strong>circle</strong> one
@@ -245,7 +245,7 @@ html
         span.regular
           | (please circle one)
 
-      h3.indented #{$saturday_date} #{$fives_year}
+      h3.indented Saturday #{$saturday_date} #{$fives_year}
 
       ul
         li U6
@@ -255,7 +255,7 @@ html
         li U14
         li U16
 
-      h3.indented #{$sunday_date} #{$fives_year}
+      h3.indented Sunday #{$sunday_date} #{$fives_year}
       ul
         li U7
         li U9

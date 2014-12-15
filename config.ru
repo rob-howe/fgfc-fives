@@ -5,7 +5,7 @@ require 'active_record'
 require 'mysql2'
 
 require 'pdfkit'
-use PDFKit::Middleware, {}, :only => '/app_form'
+use PDFKit::Middleware, {}, :only => '/pdf/fg5s_application_form'
 
 puts "ENV['DATABASE_URL']=#{ENV['DATABASE_URL']}"
 
@@ -26,13 +26,13 @@ ActiveRecord::Base.establish_connection(
 #$age_groups = AgeGroup.find(:all)
 #$user = User.find(:all)
 year = Date.today.year
-$saturday_date = 'Saturday 24th May'
-$sunday_date = 'Sunday 25th May'
+$saturday_date = '23rd May'
+$sunday_date = '24th May'
 $fives_year = Date.today.month > 8 ? year + 1 : year
 season_year = Date.today.month < 8 ? year - 1 : year
 $season = "#{season_year}/#{season_year + 1}"
 
-$closing_date = 'Friday 2nd May 2014'
+$closing_date = 'Friday 1st May 2014'
 $discount_end_date = 'Friday 4th May 2013'
 
 run FivesController
