@@ -16,7 +16,7 @@ html
       ul li {
         padding: 0 5px;
         display:inline-block ;
-        width:50px;
+        width:45px;
         text-align:center;
       }
       ul.normal {
@@ -60,16 +60,19 @@ html
       .smaller {
         font-size:10px;
       }
+      .address {
+        font-size:12px;
+      }
       .url {
         color:blue;
       }
       .team_spacer {
         margin-top:50px;
-        margin-bottom:132px;
+        margin-bottom:92px;
       }
       .designation_spacer {
-        margin-top:90px;
-        margin-bottom:80px;
+        margin-top:50px;
+        margin-bottom:20px;
       }
       .left-bar-spacer {
           padding-bottom:16px;
@@ -124,6 +127,7 @@ html
         li U9
         li U11
         li U13
+        li.girls U13 Girls
         li U15
         li U18
       ul
@@ -134,11 +138,6 @@ html
         li
         li
 
-      ul
-        li
-        li
-        li
-        li.girls U13 Girls
 
       p Age Groups as per the #{$season} season
 
@@ -220,6 +219,9 @@ html
           any name you'd prefer.
 
       p.left-bar-spacer
+        | Please enter the league and division your team plays in.
+
+      p.left-bar-spacer
         ' Full <strong>Rules & Regulations</strong> for
           the FG5s #{$fives_year} are published
           on the website
@@ -231,7 +233,7 @@ html
       p.left-bar-spacer
         | Players do need to be
           registered with a league.
-      p style="margin-bottom:25px;"
+      p style="margin-top:25px;margin-bottom:25px;"
         | Should you have <strong>any further
           questions</strong> please contact
         ul.side-bar.smaller
@@ -264,15 +266,11 @@ html
         li U9
         li U11
         li U13
+        li.girls U13(girls)
         li U15
         li U18
       p
         | #{' '}
-      ul
-        li
-        li
-        li
-        li.girls U13 Girls
 
       table
         tr
@@ -280,6 +278,12 @@ html
           td ..............................................................
         tr
           td Designation:
+          td ..............................................................
+        tr
+          td League:
+          td ..............................................................
+        tr
+          td Division:
           td ..............................................................
         tr
           td Manager Name:
@@ -306,20 +310,13 @@ html
           td Postcode:
           td .................................
 
-      p
-        | Please send your
-          completed entry form along
-          with your entrance fee to:
-
-      ul.normal.indented
-        li Lee Ashley
-        li 3 Grennan Close,
-        li Ingrave,
-        li Brentwood,
-        li CM13 3YD
-
       p style="margin-bottom:0;"
         | The entrance fee is <strong>£40</strong>, or £35 if submitting your
           application before the 1st April.
           Cheques should be made payable to
           Forest Glade FC.
+      p
+        ' Please send your completed entry form along
+          with your entrance fee to:
+        span.address Lee Ashley, 3 Grennan Close, Ingrave, Brentwood, CM13 3YD
+
