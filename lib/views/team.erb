@@ -1,4 +1,13 @@
 <h1><%= @age_group.description %> Age Group - <%= @age_group.day %></h1>
+<% unless @age_group.open %>
+    <br/>
+    <div style="color:red;font-size: 12px;">
+        <strong>Please Note:</strong> Online applications have now closed for the <%= @age_group.description %> age group.
+        <span> Application enquiries for this age group should be made by email to: fg5s@forestgladefc.co.uk or by phone/text on: 07507-291485.<br/></span>
+        <br/>
+    </div>
+<% end %>
+
 <% if @age_group.exhibition_team? %>
     <p>The <%= @age_group.description %> Tournament will follow the FA's guidelines for non competitive tournaments for
         this  age.
@@ -18,10 +27,10 @@
 
     <p>Teams that have completed registration are listed below.</p><br/>
     <% unless @fives_teams.nil? %>
-    <% @fives_teams.each do |team| %>
-        <div style="padding-left:40px;">
-            <p><%= team.team_name%> - <%= team.team_designation %></p>
-        </div>
-    <% end %>
+        <% @fives_teams.each do |team| %>
+            <div style="padding-left:40px;">
+                <p><%= team.team_name%> - <%= team.team_designation %></p>
+            </div>
+        <% end %>
     <% end %>
 </div>
