@@ -1,6 +1,7 @@
 Given /^I goto the home page$/ do
-  visit_page HomePage
+  visit '/'
 end
+
 Then /^I should see the top heading with '(.*)'$/ do |heading|
-  @current_page.top_heading.text.should == heading
+  expect(page.find('#top_heading').text).to eq heading
 end

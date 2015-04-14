@@ -2,10 +2,11 @@ source 'http://rubygems.org'
 
 gem 'sinatra'
 gem 'slim'
-gem 'activesupport', '3.2.9'
+gem 'activesupport'
 gem 'uagent'
-gem 'activerecord', '3.2.9'
-gem 'activemodel', '3.2.9'
+gem 'activerecord'
+gem 'sinatra-activerecord'
+gem 'activemodel'
 gem 'mysql2'
 gem 'pony'
 # async calls with thin
@@ -22,13 +23,10 @@ gem 'sprockets', '~> 2.0'
 
 group :development do
   gem 'cucumber'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'poltergeist'
+  gem 'database_cleaner'
   gem 'rake'
-  gem "watir-webdriver"
-  gem 'ruby-debug-ide'
   gem 'rspec'
-  gem 'webmock'
-  gem 'page-object'
-  gem 'savon'
-  gem 'colorize'
-  gem 'chromedriver-helper'
 end
