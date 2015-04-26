@@ -77,8 +77,8 @@ class FivesController < Sinatra::Base
 
   get '/teams/:team_name' do
     team_description = params[:team_name].gsub(/_/, ' ')
-    @age_group = AgeGroup.find_by(description: team_description)
-    @fives_teams = FivesTeam.where(age_group_id: @age_group.id, paid: true) unless @age_group.nil?
+    @age_group = AgeGroup.find_by_description(team_description)
+    @fives_teams = FivesTeam.find_all_by_age_group_id_and_paid(@age_group.id, true) unless @age_group.nil?
 
     erb :team
   end
