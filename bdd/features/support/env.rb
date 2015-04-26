@@ -40,6 +40,7 @@ ActiveRecord::Base.establish_connection(
     password: 'password'
 )
 
+# run in sql to create database
 # commands = IO.read("/home/user/projects/fgfc-fives/forest_glade.sql").split(';')
 # commands.each do |command|
 #   ActiveRecord::Base.connection.execute("#{command};")

@@ -1,10 +1,11 @@
 source 'http://rubygems.org'
+ruby '1.9.3'
 
 gem 'sinatra'
+gem 'activerecord', '3.2.9'
 gem 'slim'
 gem 'activesupport'
 gem 'uagent'
-gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'activemodel'
 gem 'mysql2'
