@@ -87,6 +87,10 @@ class FivesController < Sinatra::Base
     slim :fives_app_form, layout: false
   end
 
+  get '/pdf/rules' do
+    erb :rules_pdf, layout: false
+  end
+
 
   helpers do
     def discount_applicable

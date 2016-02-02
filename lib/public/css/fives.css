@@ -399,8 +399,8 @@ p.small-text-right {
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-/
-/
+
+
 .tabs-selected a {
     background-color: #fff;
     color: #000;
@@ -531,4 +531,11 @@ div #content {
     font-size: 20px;
     /*font-weight:bold;*/
     padding-bottom: 12px;
+}
+
+#rules ul {
+    margin-left: 20px;
+}
+#rules .indent {
+    margin-left: 20px;
 }
