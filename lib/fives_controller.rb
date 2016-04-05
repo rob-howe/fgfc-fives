@@ -104,7 +104,7 @@ class FivesController < Sinatra::Base
 
     def applications_closed
       $closing_date
-      false
+      true
     end
 
     def applications_closing
