@@ -35,7 +35,7 @@ class FivesController < Sinatra::Base
   end
 
   get '/admin/age_group' do
-    @fives_teams = FivesTeam.find_all_by_age_group_id(params[:age_group_id]) unless params[:age_group_id].nil?
+    @fives_teams = FivesTeam.where(age_group_id: params[:age_group_id]) unless params[:age_group_id].nil?
     @age_group = AgeGroup.find(params[:age_group_id].to_i)
     erb :'admin/age_group_list'
   end

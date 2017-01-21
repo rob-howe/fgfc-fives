@@ -78,7 +78,8 @@ class FivesController < Sinatra::Base
   get '/teams/:team_name' do
     team_description = params[:team_name].gsub(/_/, ' ')
     @age_group = AgeGroup.find_by_description(team_description)
-    @fives_teams = FivesTeam.find_all_by_age_group_id_and_paid(@age_group.id, true) unless @age_group.nil?
+    #@fives_teams = FivesTeam.find_all_by_age_group_id_and_paid(@age_group.id, true) unless @age_group.nil?
+    @fives_teams = FivesTeam.where(age_group_id: @age_group.id, paid: true) unless @age_group.nil?
 
     erb :team
   end
@@ -104,7 +105,7 @@ class FivesController < Sinatra::Base
 
     def applications_closed
       $closing_date
-      true
+      false
     end
 
     def applications_closing
