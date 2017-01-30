@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baa27ea1-00e9-46b1-941d-49cddb931b25" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/views/fives_app_form.slim" afterPath="$PROJECT_DIR$/lib/views/fives_app_form.slim" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/views/contacts.erb" afterPath="$PROJECT_DIR$/lib/views/contacts.erb" />
     </list>
     <ignored path="fgfc-fives.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,21 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fives_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fives_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/fives_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-1.7315011">
               <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fives_app_form.slim" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/views/fives_app_form.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33252427">
-              <caret line="240" column="42" selection-start-line="240" selection-start-column="42" selection-end-line="240" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -74,7 +64,7 @@
       <file leaf-file-name="fives_app_left_bar.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/views/fives_app_left_bar.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.9680853">
+            <state vertical-scroll-proportion="6.0319147">
               <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
@@ -117,8 +107,8 @@
       <file leaf-file-name="contacts.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/views/contacts.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.870968">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state vertical-scroll-proportion="-11.419354">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -158,9 +148,9 @@
         <option value="$PROJECT_DIR$/lib/fives_controller.rb" />
         <option value="$PROJECT_DIR$/lib/views/layout.erb" />
         <option value="$PROJECT_DIR$/lib/views/rules_include.erb" />
-        <option value="$PROJECT_DIR$/lib/views/contacts.erb" />
         <option value="$PROJECT_DIR$/lib/views/fives_app_left_bar.slim" />
         <option value="$PROJECT_DIR$/lib/views/fives_app_form.slim" />
+        <option value="$PROJECT_DIR$/lib/views/contacts.erb" />
       </list>
     </option>
   </component>
@@ -630,12 +620,12 @@
       <updated>1484600432610</updated>
       <workItem from="1484600436707" duration="1083000" />
       <workItem from="1484690311073" duration="1004000" />
-      <workItem from="1484691979837" duration="11358000" />
+      <workItem from="1484691979837" duration="11776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13445000" />
+    <option name="totallyTimeSpent" value="13863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -836,14 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fives_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.ru">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -860,14 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/contacts.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.870968">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -876,9 +850,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/contacts.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.419354">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/views/fives_app_left_bar.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.9680853">
+        <state vertical-scroll-proportion="6.0319147">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
@@ -891,6 +873,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33252427">
           <caret line="240" column="42" selection-start-line="240" selection-start-column="42" selection-end-line="240" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fives_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7315011">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>
       </provider>
