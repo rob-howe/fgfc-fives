@@ -94,6 +94,12 @@ class FivesController < Sinatra::Base
 
 
   helpers do
+    def fives_year
+      year = Date.today.year
+      fives_year = (Date.today.month > 8 ? year + 1 : year)
+      fives_year
+    end
+
     def discount_applicable
       today = Date.today
       first_of_april = Date.new(fives_year, 4, 1)
