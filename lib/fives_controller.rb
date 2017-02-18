@@ -95,8 +95,9 @@ class FivesController < Sinatra::Base
 
   helpers do
     def discount_applicable
-      #todo make work
-      false
+      today = Date.today
+      first_of_april = Date.new(fives_year, 4, 1)
+      today < first_of_april
     end
 
     def has_errors
