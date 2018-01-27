@@ -1,17 +1,17 @@
-<div id="pageBody">
+<div id="pageBody" style="margin-left: 10%; margin-right: 10%; width: 100%;">
     <h1 id="top_heading">The Forest Glade Fives - <%= $fives_year %></h1>
     <% if applications_closed %>
         <br/>
-                <span style="color:red;font-size: 20px;">*** <strong>Please Note:</strong> Online applications have now closed ***<br/><br/></span>
-                    <span style="color:red;font-size: 16px;">Any enquiries should be made by email to:fg5s@forestgladefc.co.uk</span>
-                <br/>
-                <br/>   <% end %>
+        <div style="color:red;font-size: 20px;">****************************************************************************************</div>
+        <div style="color:red;font-size: 20px;">&nbsp;&nbsp;&nbsp; <strong>Please Note: FG5s 2018</strong><br/><br/></div>
+        <div style="color:red;font-size: 20px;">&nbsp;&nbsp;&nbsp; <strong>There is no FG5s tournament at Forest Glade FC this year. </strong><br/><br/></div>
+        <div style="color:red;font-size: 20px;">****************************************************************************************</div
+    <% end %>
     <% if applications_closing %>
         <p>
             <span style="color:red">*** Please <strong>NOTE</strong> the closing date for applications and payment is <strong><%= $closing_date %></strong> ***</span><br/><br/>
         </p>
     <% end %>
-    <h2>Saturday <%= $saturday_date %> & Sunday <%= $sunday_date %>  <%= $fives_year %></h2>
     <br/>
     <p>The Forest Glade Fives has been running as a tournament since 2000 and has become one of the premier end of
         season 5 a-side football events for clubs in the South of England.</p>
@@ -45,11 +45,4 @@
     <p>As always, whilst the football is the major attraction, around the ground there is planned to be other interests,
         such as a BBQ, Hot and Cold Refreshments and a Sweet tent. Making this an event for all the family to
         attend.</p><br/>
-    <% if discount_applicable %>
-        <p>The entry fee is &pound;40 per team. There is a <strong>&pound;5 discount</strong> for teams registered before the 31st March
-            <%=$fives_year%>.</p>
-    <% else %>
-        <p>The entry fee is &pound;40 per team.</p>
-    <% end %>
-    <p>Please note: fees are non-refundable for any entries withdrawn after 1st April <%=$fives_year%></p>
 </div>
